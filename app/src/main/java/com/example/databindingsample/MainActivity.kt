@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val myUser = User("John","Doe",25,false)
+        val myUser = User("John","Doe",25,true)
 
         binding.user = myUser
     }

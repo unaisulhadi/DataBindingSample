@@ -5,9 +5,15 @@
 
     <data>
         <import type="android.view.View"/>
+        <import type="java.util.List"/>
+        <import type="com.example.databindingsample.MyUtil"/>
+        <import type="com.example.databindingsample.User"/>
         <variable
             name="user"
-            type="com.example.databindingsample.User" />
+            type="User" />
+        <variable
+            name="userList"
+            type="List&lt;User>" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +25,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@{MyUtil.changeText(user.firstName)}"
             android:visibility="@{user.loggedIn ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
