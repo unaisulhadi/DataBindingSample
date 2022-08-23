@@ -14,6 +14,16 @@
         <variable
             name="userList"
             type="List&lt;User>" />
+        
+        <import type="android.graphics.drawable.Drawable"/>
+        <variable
+            name="drawable"
+            type="Drawable" />
+        
+        <import type="com.example.databindingsample.MyViewModel"/>
+        <variable
+            name="myViewModel"
+            type="MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +35,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{MyUtil.changeText(user.firstName)}"
+            android:text="@{myViewModel.message}"
             android:visibility="@{user.loggedIn ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
