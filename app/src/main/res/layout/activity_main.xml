@@ -25,6 +25,10 @@
         <variable
             name="myViewModel"
             type="MyViewModel" />
+        <import type="com.example.databindingsample.DataModel"/>
+        <variable
+            name="dataModel"
+            type= "DataModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,6 +68,17 @@
             app:layout_constraintEnd_toEndOf="@+id/edittext"
             app:layout_constraintStart_toStartOf="@+id/edittext"
             app:layout_constraintTop_toBottomOf="@+id/edittext" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            loadImageFromUrl="@{dataModel.profilePhoto}"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/edittext"
+            app:layout_constraintStart_toStartOf="@+id/edittext"
+            tools:srcCompat="@tools:sample/avatars" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

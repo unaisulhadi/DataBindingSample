@@ -30,5 +30,12 @@ class MainActivity : AppCompatActivity() {
                 myViewModel.setMessage(text.toString())
             })
 
+
+        //
+
+
+        val dataModel = DataModel("Test","Test Desc","https://i.picsum.photos/id/661/400/400.jpg?hmac=wsnLOVv0EBUig0uzTa1e--ULW5_swoFNuzZIZJyeKb8")
+        binding.dataModel = dataModel
+
     }
 }
